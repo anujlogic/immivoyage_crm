@@ -1,0 +1,112 @@
+.card-primary:not(.card-outline)>.card-header{
+  background-color: #3c8dbc !important;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #2b4379 ! important;
+    color: #fff;
+    margin: 0px 0px 31px 0;
+}
+
+.btn-info{
+	background-color: #2b4379 !important;
+    border-color: #17a2b8 !important;
+}
+
+.card-info:not(.card-outline)>.application-form {
+    background-color: #c1c6c796 !important;
+}
+
+.application-form .card-title{
+	color: #d41818;
+}
+
+.univ_widget{
+	height: 190px;
+	background: #fff;
+}
+
+.apply_now{
+	background-color: #788286 !important;
+	border-bottom: 3px solid #e8220e; 
+}
+
+.univ_widget_box{
+	outline: solid 1px #e8220e; 
+}
+
+[class*=sidebar-dark-] {
+    background-color: #515151 !important;
+}
+
+.price .table tr td{
+	height: 67px !important;
+}
+
+.process-pull-left {
+	float: right;
+	margin-top:10px;
+}
+
+.process-pull-left .btn {
+    color: #fff !important;
+    background-color: #de0303;
+    border-color: #d4241d;
+}
+
+.jumbotron {
+    padding: 0rem 0rem !important;
+    font-weight: 300;
+}
+
+
+
+/***************** DROPZONE STYLE CSS **************/
+.dz-image img {
+    width: 100%;
+    height: 100%;
+}
+.dropzone.dz-started .dz-message {
+	display: block !important;
+}
+.dropzone {
+	/*border: 2px dashed #028AF4 !important;*/
+	padding: 30px !important;
+    border: 4px dashed #ccc !important;
+}
+.dropzone p {
+	margin: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #bbb;
+}
+
+.dropzone .dz-preview.dz-complete .dz-success-mark {
+    opacity: 1;
+}
+.dropzone .dz-preview.dz-error .dz-success-mark {
+    opacity: 0;
+}
+.dropzone .dz-preview .dz-error-message{
+	top: 144px;
+}
+
+.dropzone . btn-default {
+	color: #000;
+    background-color: #fff;
+    border-color: #d5d5d5;
+}
+
+.reg-form .btn-primary{
+    color: #fff;
+    background-color: #de0303;
+    border-color: #d4241d;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+div.required .col-form-label:before {
+    color: red;
+    content: "* ";
+    font-weight: 700;
+}

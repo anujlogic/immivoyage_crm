@@ -1,0 +1,263 @@
+#side-nav.col-md-3.col-sm-3{
+	padding-left: 0px;
+
+}
+#onlinetest.col-md-6 {
+    padding-left: 0;
+    }
+.side-nav > ul > li{
+	list-style: none;
+	text-decoration: none;	
+
+}
+.side-nav-th {
+	background-color: #D1BB00;
+    border: 1px solid gray;
+    margin: 0;
+    color:#fff;
+    padding: 0px;
+    text-align: center;
+}
+.side-nav-th >li h3{
+	margin-top: 10px;
+}
+.side-nav-menu{
+    font-size: 16px;
+    background-color: #9bbb59;
+    overflow: hidden;
+    padding-left:12%;
+}
+.side-nav-menu > li{
+	
+	border-bottom: 1px solid gray;
+	margin-left: 0;
+    padding: 8px 25px;
+    
+    margin-left: -20.9%;
+}
+.side-nav-menu > li a{
+	
+	text-decoration: none;
+	color:#fff;       
+}
+.side-nav-menu > li:hover{	
+        background-color: #8AAA44;
+}
+.side-nav-menu > li a:hover{
+	color:#fff;        
+}
+.side-nav-menu>li>a>span {
+	padding-right: 2%;
+}
+.side-nav>img{
+	margin:5% 20%; 
+	width:50%; 
+	height:100px;
+}
+.right-nav{
+    padding-left: 0px !important;
+    padding-bottom: 5px;
+    padding-top:5px;
+}
+
+.onlinetest{
+	list-style: none;
+	overflow: hidden;	
+}
+.onlinetest > li > ul > li {
+	display: inline-block;
+	padding: 8px 0;
+	margin-left: 0px;
+	width: 49%;
+	text-decoration: none;
+}
+.onlinetest > li {
+	text-decoration: none;
+	
+}
+#onlinetest > ul{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.onlinetest-th{
+        border: 1px solid gray;
+	background-color: #40A3DC;
+	margin-top: 10px;
+}
+.onlinetest-th h3 {	
+	margin-top: 10px;
+	font-size: 23px;
+        color:#ffffff;
+}
+.onlinetest-li {	
+	background-color: #E5F6FF;
+}
+.onlinetest-li > li > ul {
+	border-bottom: 1px solid gray;
+	font-size: 20px;
+	color:gray;
+}
+.onlinetest-li > li > ul:hover {
+	background-color: #CEEDFF;
+	color:gray;
+}
+
+.randomtest{
+    padding:0px;
+   
+     font-size: 20px;
+}
+.randomtest-ul{
+    list-style: none;
+    padding-top:5px;
+    color:#ffffff;
+     background-color: #40A3DC;
+}
+.randomtest-ul li{
+    display: inline-block;
+}
+.randomtest-th-lt{
+    float:left;
+    width:25%;
+}
+.randomtest-th-rt{
+    float:right;
+    width:25%;
+    text-align: right;
+}
+.randomtest-th-cen{
+    text-align: center;
+    width:50%;
+    color:#a277a3;
+}
+.randomtest-que{
+    margin-top: 25px;
+    background-color: #CEEDFF;
+}  
+.randomtest-que-ul li{
+    list-style: none;
+}
+.radomtest-que-sub{
+    text-align: center;
+}
+.randomtestact-th-lt{
+    text-align: left;
+    width:50%;
+}
+.randomtestact-th-rt{
+    
+    text-align:right;
+    width:49%;
+}
+.button-res{
+    background-color: #6E021B;
+    border: 1px solid #f9abab;
+    border-radius: 3px;
+    text-align: center;
+    color:#ffffff;
+}
+.li-right{
+	text-align: center;
+	height:52px;
+}
+.onlinetest-li .li-right{
+    padding-left: 25%;
+}
+.li-right a, .li-right a:focus{
+		background-color: #DEDEDC;
+		text-decoration: none;
+		color: gray;
+		display: block;
+		height: 37px;
+		margin: auto;
+		padding-top: 4px;
+		text-align: center;
+	}
+	.li-right a:hover{
+		background-color: #DEDEDC;
+		text-decoration: none;
+		color: black;
+	}
+.pre-pg {
+    display: block;
+    float: left;
+    }
+.pre-pg a:link, .pre-pg a:visited {
+    background-color: transparent;
+    color: #585958;
+    font-size: 105%;
+    text-decoration: none;
+}
+.pre-pg a:hover, .pre-pg a:hover{
+	color: black;
+}
+.nxt-pg {
+    display: block;
+    float: right;
+}
+.sup {
+  position: relative;
+  bottom: 1ex; 
+  font-size: 80%;
+}
+.table-con{
+    width:100%;
+    border: 1px solid black;
+}
+.nxt-pg a:link, .nxt-pg a:visited {
+    background-color: transparent;
+    color: #585958;
+    font-size: 105%;
+    text-decoration: none;
+}
+.nxt-pg a:hover, .nxt-pg a:hover {
+	color: black;
+}
+.tutorials{
+    font-size: 20px;
+    height: 63px;
+    padding-top: 14px;
+ }
+ .tutorials>ul{
+ 	overflow: auto;
+    padding-left: 0;
+ }
+ #onlinetest h1{
+     text-align: center;
+     margin-top: 0px;
+     background-color: #D34646;
+     color:#ffffff;
+     font-size: 24px;
+     padding: 10px 0;
+    
+ }
+ .pg-txt-wapper{
+     border: 1px solid #CCCCCC;
+     margin-top:15px;
+ }
+ .page-txt{
+    text-align: justify;
+    padding:0px 10px;
+ }
+ .side-nav-menu>li>a>i{
+ 	padding-right: 10px;
+ }
+ pre{
+     margin-bottom: 12px !important;
+ }
+ .text-h3{
+     
+ }
+ .text-h4{
+     
+ }
+ .text-ol{
+     
+ }
+ .text-str{
+     
+ }
+ .text-ol-i{
+     
+ }
+ 
