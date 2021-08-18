@@ -54,7 +54,7 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>My Documents</p>
                 </a>
-              </li> 
+              </li>
             </ul>  
           </li>
           @elseif(Auth::check() && Auth::user()->user_type=='admin')
