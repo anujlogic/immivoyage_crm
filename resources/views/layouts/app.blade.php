@@ -44,8 +44,7 @@
         attribution="biz_inbox"
         page_id="107694657733142">
       </div>
-<!-- END FACEBOOK CHAT PLUGIN -->      
-
+<!-- END FACEBOOK CHAT PLUGIN -->
         <div class="se-pre-con"></div>
         @include("partials.header") 
         @include("partials.sidebar")

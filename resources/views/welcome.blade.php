@@ -1,16 +1,16 @@
 <style>
-.no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-.se-pre-con {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background-color:red;
-    background: url('{{ URL::asset('/public/image/load.gif')}}') center no-repeat #fff;
-}
+    .no-js #loader { display: none; }
+    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+    .se-pre-con {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color:red;
+        background: url("{{ URL::asset('/public/image/load.gif')}}") center no-repeat #fff;
+    }
 </style>
 <x-guest-layout id="loading">
     <x-jet-authentication-card>
@@ -25,7 +25,6 @@
                 {{ session('status') }}
             </div>
         @endif
-
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div>
@@ -62,6 +61,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 <script type="text/javascript">
     $(window).load(function(){
-        $(".se-pre-con").fadeOut("slow");;
+        $(".se-pre-con").fadeOut("slow");
     });
 </script>

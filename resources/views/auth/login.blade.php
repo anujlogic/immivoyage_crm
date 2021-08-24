@@ -9,7 +9,7 @@
     height: 100%;
     z-index: 9999;
     background-color:red;
-    background: url('{{ URL::asset('/public/image/load.gif')}}') center no-repeat #fff;
+    background: url("{{ URL::asset('/public/image/load.gif')}}") center no-repeat #fff;
 }
 </style>
 <x-guest-layout>

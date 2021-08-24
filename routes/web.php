@@ -52,6 +52,7 @@ Route::get('/', function () {
 	Route::post('/user/update', [UserController::class, 'user_update'])->name('user.update');
 	Route::get('user/doc/{id}', [UserController::class, 'view_user_detail'])->name('user.doc');
 	Route::get('/user/delete/{id}', [UserController::class, 'user_delete'])->name('user.delete');
+	Route::post('/forget-password', [UserController::class, 'forget_password'])->name('user.forget-pswd');
 
 // IELTS ROUTES  //
 	Route::get('/ielts/list',[IeltsController::class, 'index'])->name('ilets.list');
@@ -129,7 +130,9 @@ Route::get('/', function () {
 	Route::get('/test/sheet/{id}',[IeltsTestController::class, 'test_sheet'])->name('test.sheet');
 	Route::post('/examinee/result/store',[IeltsTestController::class, 'examinee_result_store'])->name('examinee.result.store');	
 	Route::get('/examinee/result/thanku',[IeltsTestController::class, 'thankyou'])->name('examinee.result.thanku');
-	Route::get('/answer/sheet/{id}',[IeltsTestController::class, 'answer_sheet'])->name('answer.sheet');	
+	Route::get('/answer/sheet/{id}',[IeltsTestController::class, 'answer_sheet'])->name('answer.sheet');
+
+	Route::get('/link/guest/registration', [UserController::class, 'send_link'])->name('link.guest.registration');	
 
 
 

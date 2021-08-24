@@ -9,6 +9,7 @@ use Redirect;
 use Auth;
 use File;
 use Hash;
+use Str;
 
 class UserController extends Controller{
 
@@ -117,11 +118,37 @@ class UserController extends Controller{
 		}catch (Exception $e){
 			return back('/dashboard')->with('error', 'Data not updated.Please try again!');
 		}
-	}
+	}  
 
     public function view_user_detail($id){
         $client = Client::with('client_image')->with('client_account')->find($id);
         return view('admin.client.view',compact('client'));
     }
+
+
+    public function forget_password(Request $request){
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|email|exists:users',
+        ]);
+
+        try{
+            $token = Str::random(64);
+            $user  = User::where('email','=',$request->input('email'))->first();
+            if($user){
+                $user->password = $token;
+                $user->save();
+                return redirect('/forgot-password')->with('success', 'Password send on your Verified Email Account!');
+            }else{
+                return redirect('/forgot-password')->with('error', 'Account Does not Exist !');
+            }
+        }catch(Exception $e){
+            return redirect('/forgot-password')->with('error', 'Something Wrong. Please Try Again !');
+        }
+    }
+
+    public function send_link(){
+        //print_r('hello Mr guest user');exit;
+        return view('admin.guest.guest_registration');
+    } 
     
 }
