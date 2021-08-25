@@ -110,3 +110,7 @@ div.required .col-form-label:before {
     content: "* ";
     font-weight: 700;
 }
+
+.guest-form{
+    box-shadow: 9px -9px 20px 2px #83b1cc;
+}

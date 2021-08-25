@@ -13,6 +13,10 @@ use Str;
 
 class UserController extends Controller{
 
+    public function __construct(){
+        $this->middleware('auth');
+    }
+    
 	public function user_create(){
 		return view('user.create');
 	}
@@ -146,9 +150,4 @@ class UserController extends Controller{
         }
     }
 
-    public function send_link(){
-        //print_r('hello Mr guest user');exit;
-        return view('admin.guest.guest_registration');
-    } 
-    
 }

@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="{{ asset('public/asset/plugins/jqvmap/jqvmap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('public/asset/dist/css/adminlte.min.css') }}">
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
     </head>
     <style type="text/css">
     	.logo{
@@ -37,10 +38,15 @@
     </div>
   </div>
 </section>
+<script type="text/javascript">
+/*$(document).ready(function(){
+	Swal.fire("Thanks", "You Are Successfully Register", "success");
+});*/
+</script>
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-        <div class="col-md-8 offset-md-2">
+        <div class="col-md-8 offset-md-2 guest-form">
          	<div class="card card-primary">  
 					@if($errors->any())
 	  					<div class="alert alert-danger">
@@ -53,7 +59,7 @@
 				<div class="card-header">
 				<h3 class="card-title">Register With Immivoyage</h3>
 				</div>
-				<form role="form" method="post" action="{{ route('call.store') }}" enctype="multipart/form-data">
+				<form role="form" method="post" action="{{ route('guest.registration') }}" enctype="multipart/form-data">
 					@csrf
 				<div class="card-body">
 				  	<div class="form-group">
@@ -179,7 +185,7 @@
 		                    </select>
                   		</div>
               		</div>
-              		<div class="form-group col-md-6" id="call_manage_by">
+              		<!--div class="form-group col-md-6" id="call_manage_by">
 		                <label>Call Manage By</label>
 	                    <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" style="width: 100%;" name="call_manage_by" id="call_manage_by">
 		                    <option selected="selected" disabled>Select...</option>
@@ -187,7 +193,7 @@
 		                    <option value="{{-- $val->id --}}">{{-- $val->name --}}</option>
 		                    {{-- @endforeach --}}
 	                    </select>
-                  	</div>
+                  	</div-->
                   	<div class="form-group col-md-6" id="feed_back">
                         <label>Feed Back</label>
                         <textarea class="form-control" name="feed_back" rows="3" placeholder="Enter ..."></textarea>
@@ -222,6 +228,7 @@
 </div> 
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 <script src="{{ asset('public/asset/plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{ asset('public/asset/plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
@@ -230,7 +237,6 @@ $(document).ready(function (){
   bsCustomFileInput.init();
 });
 </script>
-
 <script type="text/javascript">
 	$(document).ready(function(){
 	    $("#call_purpose").on('change', function(){

@@ -10,6 +10,7 @@ use App\Http\Controllers\CallLeadsController;
 use App\Http\Controllers\CaipsController;
 use App\Http\Controllers\TutorController;
 use App\Http\Controllers\IeltsTestController;
+use App\Http\Controllers\RegisterViaLinkController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -132,7 +133,6 @@ Route::get('/', function () {
 	Route::get('/examinee/result/thanku',[IeltsTestController::class, 'thankyou'])->name('examinee.result.thanku');
 	Route::get('/answer/sheet/{id}',[IeltsTestController::class, 'answer_sheet'])->name('answer.sheet');
 
-	Route::get('/link/guest/registration', [UserController::class, 'send_link'])->name('link.guest.registration');	
-
-
-
+// Send link to remote Guest user
+	Route::get('/link/guest/registration', [RegisterViaLinkController::class, 'send_link'])->name('link.guest.registration');	
+	Route::post('/guest/registration', [RegisterViaLinkController::class, 'guest_registration'])->name('guest.registration');	

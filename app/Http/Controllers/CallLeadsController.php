@@ -81,7 +81,7 @@ class CallLeadsController extends Controller
             $call_lead->required_test = $req->post('ielts_test');
             $call_lead->require_band  = $req->post('ieltsBand');
         }
-        $call_lead->save();
+            $call_lead->save();
             return redirect('/call/list')->with('success', 'Call leads saved successfully.');
         } catch (Exception $e) {
             return redirect('/call/list')->with('error', 'Call leads failed to submit.Please try again!');
@@ -90,7 +90,7 @@ class CallLeadsController extends Controller
     
     public function edit($id){
     	$call_lead = CallLeads::find($id);
-        $manager = User::where('user_type','management')->get();
+        $manager   = User::where('user_type','management')->get();
     	return view('admin.leads.edit',compact('call_lead','manager'));
     }
     

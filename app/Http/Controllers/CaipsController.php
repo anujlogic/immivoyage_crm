@@ -7,6 +7,10 @@ use File;
 
 class CaipsController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function index(){
     	$caips = CaipsNotes::orderBy('id','DESC')->get();
      	return view('admin.caips.index',compact('caips'));
