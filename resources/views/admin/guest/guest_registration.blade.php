@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="{{ asset('public/asset/plugins/jqvmap/jqvmap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('public/asset/dist/css/adminlte.min.css') }}">
-        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
     </head>
     <style type="text/css">
     	.logo{
@@ -27,7 +27,7 @@
         page_id="107694657733142">
       </div>
 <!-- END FACEBOOK CHAT PLUGIN -->
-      <div class="se-pre-con"></div>
+<div class="se-pre-con"></div>
 <div class="content-wrappers">
 <section class="content-header">
   <div class="container-fluid">
@@ -38,24 +38,17 @@
     </div>
   </div>
 </section>
-<script type="text/javascript">
-/*$(document).ready(function(){
-	Swal.fire("Thanks", "You Are Successfully Register", "success");
-});*/
-</script>
 <section class="content">
     <div class="container-fluid">
         <div class="row">
         <div class="col-md-8 offset-md-2 guest-form">
-         	<div class="card card-primary">  
-					@if($errors->any())
-	  					<div class="alert alert-danger">
-	    					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	     					@foreach ($errors->all() as $error)
-					            <li>{{ $error }}</li>
-					        @endforeach
-	  					</div>
-					@endif
+         	<div class="card card-primary">
+          @if ($message = Session::get('error'))
+            <div class="alert alert-danger alert-block">
+              <button type="button" class="close" data-dismiss="alert">×</button> 
+                  <strong>{{ $message }}</strong> <i class="fas fa-thumbs-down"></i>
+            </div>
+          @endif
 				<div class="card-header">
 				<h3 class="card-title">Register With Immivoyage</h3>
 				</div>
@@ -228,9 +221,8 @@
 </div> 
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
 <script src="{{ asset('public/asset/plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{ asset('public/asset/plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
 <script type="text/javascript">
 $(document).ready(function (){
@@ -255,3 +247,19 @@ $(document).ready(function (){
 	    });
 	});
 </script>
+@if($message = Session::get('success'))
+	<script type="text/javascript">
+			$(document).ready(function(){
+				swal({
+			  title: "Success!",
+			  text: "Redirecting in 2 seconds.",
+			  type: "success",
+			  timer: 2000,
+			  showConfirmButton: false
+			}, function(){
+			      window.location.href = "http://localhost/immivoyage_crm/login";
+			});
+			});
+	</script>
+@endif
+

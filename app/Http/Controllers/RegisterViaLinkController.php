@@ -44,7 +44,6 @@ class RegisterViaLinkController extends Controller
             $call_lead->address       = $req->post('address');
             $call_lead->contact_no    = $req->post('mobile_no');
             $call_lead->call_purpose  = $req->post('call_purpose');
-            $call_lead->manage_by     = $req->post('call_manage_by');
             $call_lead->feed_back     = $req->post('feed_back');
             $call_lead->follow_up     = $req->post('follow_up');
         if($req->post('call_purpose')=="visa"){

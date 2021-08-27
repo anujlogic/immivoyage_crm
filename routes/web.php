@@ -26,7 +26,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// COMMON ROUTES  //
+// COMMON ROUTES //
 	Route::get('client', [ClientController::class, 'index'])->middleware(['role']);
 	Route::get('client/create', [ClientController::class, 'create'])->name('client.create');
 	Route::post('store', [ClientController::class, 'store'])->middleware(['role']);
